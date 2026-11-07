@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Bookshelf</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="reading.html">Currently Reading</a></li>
+            <li><a href="read.html">Already Read</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="welcome">
+
+            <div class="welcome-text">
+                <h1>Welcome to Your Bookshelf</h1>
+
+                <a href="discover.html" class="btn">Explore Books</a>
+            </div>
+
+            <div class="stats">
+
+                <div>
+                    <p>Books Read</p>
+                </div>
+
+                <div>
+                    <p>Wishlist</p>
+                </div>
+
+                <div>
+                    <p>Average Rating</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="discover">
+
+            <h2>Find Your Next Favorite Book </h2>
+
+            <div class="search-bar">
+
+                <input
+                    type="text"
+                    id="bookSearch"
+                    placeholder="Search by title or author..."
+                >
+
+                <button onclick="searchBooks()">Search</button>
+
+            </div>
+
+            <div id="results" class="book-container"></div>
+
+        </section>
+
+        <section class="bookshelf">
+
+            <div class="section-heading">
+                <h2>♡ Want to Read </h2>
+                <a href="wishlist.html">See All →</a>
+            </div>
+
+            <div class="book-container">
+            </div>
+
+        </section>
+
+
+        <section class="bookshelf">
+
+            <div class="section-heading">
+                <h2>Currently Reading </h2>
+                <a href="reading.html">See All →</a>
+            </div>
+
+            <div class="book-container">
+            </div>
+
+        </section>
+        <section class="bookshelf">
+
+            <div class="section-heading">
+                <h2>Already Read </h2>
+                <a href="read.html">See All →</a>
+            </div>
+
+            <div class="book-container">
+                <!-- Books will appear here -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
