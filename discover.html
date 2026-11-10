@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discover</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="script.js"></script>
+
+<body>
+
+    <nav class="navigation">
+
+        <a href="index.html" class="nav-button">
+            <img src="images/home.png" alt="Home">
+            <span>Home</span>
+        </a>
+
+        <a href="discover.html" class="nav-button">
+            <img src="images/discover.png" alt="Discover">
+            <span>Discover</span>
+        </a>
+
+        <a href="wishlist.html" class="nav-button">
+            <img src="images/wishlist.png" alt="Wishlist">
+            <span>Wishlist</span>
+        </a>
+
+        <a href="reading.html" class="nav-button">
+            <img src="images/reading.png" alt="Reading">
+            <span>Reading</span>
+        </a>
+
+        <a href="read.html" class="nav-button">
+            <img src="images/read.png" alt="Finished">
+            <span>Read</span>
+        </a>
+
+    </nav>
+
+    <main>
+
+        <section class="discover">
+
+            <div class="discover-text">
+                <h1>Discover Books</h1>
+            </div>
+
+            <div class="search-bar">
+
+                <input
+                    type="text"
+                    id="bookSearch"
+                >
+
+                <button onclick="searchBooks()" class="search-button">
+                    <img src="images/search.png" alt="Search">
+                </button>
+
+            </div>
+
+            <div id="results" class="book-container"></div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
