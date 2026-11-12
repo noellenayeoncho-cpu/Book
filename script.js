@@ -51,7 +51,6 @@ async function searchBooks() {
             const title = document.createElement("h3");
             title.textContent = info.title || "Untitled";
 
-            // TITLE AND PLUS BUTTON
             const bookInfo = document.createElement("div");
             bookInfo.className = "book-info-row";
 
@@ -122,7 +121,7 @@ function addToWishlist(book) {
     let wishlist = JSON.parse(localStorage.getItem("wishlistBooks")) || [];
 
     if (wishlist.some(item => item.id === book.id)) {
-        alert("This book is already in your Wishlist!");
+        showNotification("This book is already in your Wishlist!");
         return;
     }
 
@@ -139,7 +138,7 @@ function addToWishlist(book) {
 
     localStorage.setItem("wishlistBooks", JSON.stringify(wishlist));
 
-    alert("Added to your Wishlist!");
+    showNotification("Added to your Wishlist!");
 
 }
 
@@ -153,7 +152,6 @@ document.getElementById("modalAddButton").addEventListener("click", () => {
 });
 
 
-
 document.getElementById("bookModal").addEventListener("click", (event) => {
 
     if (event.target.id === "bookModal") {
@@ -163,7 +161,6 @@ document.getElementById("bookModal").addEventListener("click", (event) => {
 });
 
 
-
 document.getElementById("bookSearch").addEventListener("keydown", (event) => {
 
     if (event.key === "Enter") {
@@ -171,3 +168,19 @@ document.getElementById("bookSearch").addEventListener("keydown", (event) => {
     }
 
 });
+
+
+function showNotification(message) {
+
+    const notification = document.getElementById("notification");
+    const notificationMessage = document.getElementById("notificationMessage");
+
+    notificationMessage.textContent = message;
+
+    notification.classList.add("show");
+
+    setTimeout(() => {
+        notification.classList.remove("show");
+    }, 2500);
+
+}
