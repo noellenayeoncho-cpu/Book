@@ -338,9 +338,14 @@ header h1 {
     opacity: 1;
     transform: translateY(0);
 }
-shelf h1 {
-        font-family: 'Crafty Girls', cursive;
+.shelf h1 {
+    font-family: 'Crafty Girls', cursive;
     font-size: 59px;
     margin-bottom: 20px;
     text-align: center;
+}
+.book-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
