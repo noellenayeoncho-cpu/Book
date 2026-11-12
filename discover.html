@@ -2,19 +2,18 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap" rel="stylesheet">
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Discover</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-<script src="script.js"></script>
 
 <body>
 
@@ -56,16 +55,15 @@
             </div>
 
             <div class="search-bar">
-
                 <input
                     type="text"
                     id="bookSearch"
+                    placeholder="Search for a book..."
                 >
 
                 <button onclick="searchBooks()" class="search-button">
                     <img src="images/search.png" alt="Search">
                 </button>
-
             </div>
 
             <div id="results" class="book-container"></div>
@@ -73,6 +71,27 @@
         </section>
 
     </main>
+
+    <div id="bookModal" class="book-modal">
+
+        <div class="book-modal-content">
+
+            <button class="close-modal" onclick="closeBookModal()">×</button>
+
+            <img id="modalImage" src="" alt="Book cover">
+
+            <div class="modal-text">
+                <h2 id="modalTitle"></h2>
+                <p id="modalSummary"></p>
+
+                <button id="modalAddButton" class="add-wishlist">
+                    + Add to Wishlist
+                </button>
+            </div>
+
+        </div>
+
+    </div>
 
 </body>
 </html>
